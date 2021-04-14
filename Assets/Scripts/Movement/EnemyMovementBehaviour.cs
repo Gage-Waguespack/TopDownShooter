@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyMovementBehaviour : MonoBehaviour
 {
+    [Tooltip("The rigidbody attached to this object")]
+    [SerializeField]
     private Rigidbody _rigidbody;
     [Tooltip("The object the enemy will be seeking towards.")]
     [SerializeField]
@@ -15,7 +17,7 @@ public class EnemyMovementBehaviour : MonoBehaviour
     [Tooltip("The maximum magnitude this enemy's velocity can have.")]
     [SerializeField]
     private float _maxVelocity;
-
+    
     public GameObject Target
     {
         get
